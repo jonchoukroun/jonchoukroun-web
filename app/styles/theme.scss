@@ -1,0 +1,16 @@
+$brand-blue: #50526f;
+$brand-black: #141414;
+$brand-gray: #a0a0a0;
+$brand-white: #fefefd;
+
+p {
+  color: $brand-black;
+}
+
+// Shadows
+.dark-shadow {
+  z-index: 1000;
+  -webkit-box-shadow: 1px 1px 0px 1px rgba(20,20,20,1);
+  -moz-box-shadow: 1px 1px 0px 1px rgba(20,20,20,1);
+  box-shadow: 1px 1px 0px 1px rgba(20,20,20,1);
+}

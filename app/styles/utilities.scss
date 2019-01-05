@@ -1,0 +1,36 @@
+// Background classes
+.bg-black {
+  background-color: $brand-black;
+}
+
+.bg-blue {
+  background-color: $brand-blue;
+}
+
+.bg-gray {
+  background-color: $brand-gray;
+}
+
+// Border classes
+.border-gray {
+  border-color: $brand-gray !important;
+  border-radius: 0 !important;
+  border-style: outset !important;
+}
+
+// Text classes
+.text-black {
+  color: $brand-black;
+}
+
+.text-blue {
+  color: $brand-blue;
+}
+
+.text-gray {
+  color: $brand-gray !important;
+}
+
+.text-white {
+  color: $brand-white !important;
+}
