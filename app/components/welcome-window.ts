@@ -16,14 +16,26 @@ export default class WelcomeWindowComponent extends Component {
   }
 
   githubLinkMacro = this.setGithubLinkMacro();
+  projectsLinkMacro = this.setProjectsLinkMacro();
 
   setGithubLinkMacro() {
     return this.get('keyManager').addMacro({
-      callback: bind(this, function() {
+      callback: bind(this, () => {
         this.send('executeGithubLink');
       }),
       modifierKeys: ['Shift'],
       executionKey: 'g',
+      keyEvent: 'keydown'
+    });
+  }
+
+  setProjectsLinkMacro() {
+    return this.get('keyManager').addMacro({
+      callback: bind(this, () => {
+        this.send('executeProjectsLink');
+      }),
+      modifierKeys: ['Shift'],
+      executionKey: 'p',
       keyEvent: 'keydown'
     });
   }
@@ -41,6 +53,17 @@ export default class WelcomeWindowComponent extends Component {
       // @ts-ignore
       this.get('sendGithubRedirect')();
       this.$('#github-link').blur();
+    }, 500);
+  }
+
+  @action
+  executeProjectsLink() {
+    this.$('#projects-link').focus();
+
+    later(() => {
+      // @ts-ignore
+      this.get('sendProjectsRedirect')();
+      this.$('#project-link').blur();
     }, 500);
   }
 

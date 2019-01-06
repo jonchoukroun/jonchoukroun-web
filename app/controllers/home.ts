@@ -8,4 +8,9 @@ export default class HomeController extends Controller {
     window.open('https://github.com/jonchoukroun', '_blank');
   }
 
+  @action
+  redirectToProjects() {
+    this.transitionToRoute('projects');
+  }
+
 }
