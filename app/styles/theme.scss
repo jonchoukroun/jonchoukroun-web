@@ -48,7 +48,10 @@ body {
   font-weight: 200;
 
   @extend .drop-shadow;
-  transition: box-shadow 300ms ease, transform 300ms ease;
+  transition:
+    box-shadow 300ms ease,
+    transform 300ms ease,
+    font-weight 100ms ease-in;
 }
 
 .btn-primary:hover {
