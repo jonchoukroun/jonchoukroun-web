@@ -1,22 +1,22 @@
 <div class="d-md-none"></div>
 
 <div class="d-none d-md-block navbar-mobile drop-shadow">
-  <ul class="list-group">
+  <ul class="list-group nav">
     {{#link-to
       "home"
-      class="list-group-item border border-gray"
+      class="list-group-item border border-gray nav-item"
     }}
-      <li class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row justify-content-between home-link">
         <span>Home</span>
         <span class="ml-20">|></span>
-      </li>
+      </div>
     {{/link-to}}
 
     {{#link-to
       "projects"
-      class="list-group-item border border-gray"
+      class="list-group-item border border-gray nav-item"
     }}
-      <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row justify-content-between projects-link">
         <span>
           Projects
         </span>
@@ -26,3 +26,5 @@
     {{/link-to}}
   </ul>
 </div>
+
+<p>{{routeName}}</p>

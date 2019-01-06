@@ -82,16 +82,16 @@ body {
   color: $brand-black !important;
 }
 
-a.list-group-item:active,
-a.list-group-item:focus {
-  background-color: $brand-black !important;
-  color: $brand-white !important;
-}
-
 a.list-group-item:hover {
   background-color: $brand-blue !important;
   border-color: $brand-blue !important;
   color: $brand-white;
+}
+a.list-group-item:active,
+a.list-group-item:focus,
+a.list-group-item.active {
+  background-color: $brand-black !important;
+  color: $brand-white !important;
 }
 
 // Shadows
