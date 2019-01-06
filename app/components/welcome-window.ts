@@ -42,6 +42,7 @@ export default class WelcomeWindowComponent extends Component {
 
   willDestroyElement() {
     super.willDestroyElement();
+    
     const keyManager = this.get('keyManager');
     keyManager.removeMacro(this.githubLinkMacro);
     keyManager.removeMacro(this.projectsLinkMacro);
