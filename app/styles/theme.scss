@@ -1,16 +1,57 @@
 $brand-blue: #50526f;
 $brand-black: #141414;
+$brand-light-gray: #d1d1d1;
 $brand-gray: #a0a0a0;
-$brand-white: #fefefd;
+$brand-white: #f8f8f8;
+
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  background-color: $brand-blue;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 4rem;
+}
 
 p {
   color: $brand-black;
+  font-family: monospace;
 }
 
+// Buttons
+.btn-primary {
+  background-color: $brand-gray;
+  border-color: $brand-light-gray;
+  border-style: outset;
+  border-width: 2px;
+  color: $brand-black;
+  font-weight: 200;
+
+  @extend .drop-shadow;
+  transition: box-shadow 300ms ease, transform 300ms ease;
+}
+
+.btn-primary:hover {
+  @extend .btn-primary;
+  font-weight: 400;
+  transform: translateY(-2px);
+  @extend .large-shadow;
+}
+
+
 // Shadows
-.dark-shadow {
-  z-index: 1000;
-  -webkit-box-shadow: 1px 1px 0px 1px rgba(20,20,20,1);
-  -moz-box-shadow: 1px 1px 0px 1px rgba(20,20,20,1);
-  box-shadow: 1px 1px 0px 1px rgba(20,20,20,1);
+.drop-shadow {
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
+  box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
+}
+
+.large-shadow {
+  -webkit-box-shadow: 3px 2px 15px 2px rgba(20,20,20,0.65);
+  -moz-box-shadow: 3px 2px 15px 2px rgba(20,20,20,0.65);
+  box-shadow: 3px 2px 15px 2px rgba(20,20,20,0.65);
 }
