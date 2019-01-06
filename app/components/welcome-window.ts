@@ -17,7 +17,7 @@ export default class WelcomeWindowComponent extends Component {
   setGithubLinkMacro() {
     return this.get('keyManager').addMacro({
       callback: bind(this, function() {
-        this.send('sendToGithub');
+        this.send('executeGithubLink');
       }),
       modifierKeys: ['Shift'],
       executionKey: 'g',
@@ -31,7 +31,7 @@ export default class WelcomeWindowComponent extends Component {
   }
 
   @action
-  sendToGithub() {
+  executeGithubLink() {
     // @ts-ignore
     this.get('sendGithubRedirect')();
   }

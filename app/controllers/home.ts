@@ -5,7 +5,7 @@ export default class HomeController extends Controller {
 
   @action
   redirectToGithub() {
-    window.location.replace('https://github.com/jonchoukroun');
+    window.open('https://github.com/jonchoukroun', '_blank');
   }
 
 }
