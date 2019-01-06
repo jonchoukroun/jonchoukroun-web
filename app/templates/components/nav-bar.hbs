@@ -1,0 +1,28 @@
+<div class="d-md-none"></div>
+
+<div class="d-none d-md-block navbar-mobile drop-shadow">
+  <ul class="list-group">
+    {{#link-to
+      "home"
+      class="list-group-item border border-gray"
+    }}
+      <li class="d-flex flex-row justify-content-between">
+        <span>Home</span>
+        <span class="ml-20">|></span>
+      </li>
+    {{/link-to}}
+
+    {{#link-to
+      "projects"
+      class="list-group-item border border-gray"
+    }}
+      <div class="d-flex flex-row justify-content-between">
+        <span>
+          Projects
+        </span>
+
+        <span class="ml-20">|></span>
+      </div>
+    {{/link-to}}
+  </ul>
+</div>
