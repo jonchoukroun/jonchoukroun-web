@@ -70,26 +70,30 @@ body {
   @extend .no-shadow;
 }
 
-// Lists
-.list-group {
+// Nav
+.nav {
   background-color: $brand-gray !important;
+  @extend .drop-shadow;
 }
 
-.list-group-item {
+.nav-item {
   margin-bottom: 1px;
   padding: 5px 1em;
   background-color: $brand-gray !important;
   color: $brand-black !important;
+
+  @extend .border;
+  @extend .border-gray;
 }
 
-a.list-group-item:hover {
+a.nav-item:hover {
   background-color: $brand-blue !important;
   border-color: $brand-blue !important;
   color: $brand-white;
 }
-a.list-group-item:active,
-a.list-group-item:focus,
-a.list-group-item.active {
+a.nav-item:active,
+a.nav-item:focus,
+a.nav-item.active {
   background-color: $brand-black !important;
   color: $brand-white !important;
 }

@@ -1,5 +1,10 @@
-.navbar-mobile {
+.navbar-desktop {
   position: fixed;
   top: 2px;
   left: 1px;
+}
+
+.navbar-mobile {
+  position: absolute;
+  top: 2px;
 }

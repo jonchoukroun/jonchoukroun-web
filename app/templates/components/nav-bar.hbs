@@ -1,28 +1,52 @@
-<div class="d-md-none"></div>
+<div class="d-flex d-md-none justify-content-center">
+  <ul class="nav justify-content-center navbar-mobile">
+    <li>
+      {{#link-to
+        "home"
+        class="nav-item btn btn-primary"
+      }}
+        Home
+      {{/link-to}}
+    </li>
 
-<div class="d-none d-md-block navbar-mobile drop-shadow">
+    <li>
+      {{#link-to
+        "projects"
+        class="nav-item btn btn-primary"
+      }}
+        Projects
+      {{/link-to}}
+    </li>
+  </ul>
+</div>
+
+<div class="d-none d-md-block navbar-desktop">
   <ul class="list-group nav">
-    {{#link-to
-      "home"
-      class="list-group-item border border-gray nav-item"
-    }}
-      <div class="d-flex flex-row justify-content-between home-link">
-        <span>Home</span>
-        <span class="ml-20">|></span>
-      </div>
-    {{/link-to}}
+    <li>
+      {{#link-to
+        "home"
+        class="list-group-item nav-item"
+      }}
+        <div class="d-flex flex-row justify-content-between home-link">
+          <span>Home</span>
+          <span class="ml-20">|></span>
+        </div>
+      {{/link-to}}
+    </li>
 
-    {{#link-to
-      "projects"
-      class="list-group-item border border-gray nav-item"
-    }}
-      <div class="d-flex flex-row justify-content-between projects-link">
-        <span>
-          Projects
-        </span>
+    <li>
+      {{#link-to
+        "projects"
+        class="list-group-item nav-item"
+      }}
+        <div class="d-flex flex-row justify-content-between projects-link">
+          <span>
+            Projects
+          </span>
 
-        <span class="ml-20">|></span>
-      </div>
-    {{/link-to}}
+          <span class="ml-20">|></span>
+        </div>
+      {{/link-to}}
+    </li>
   </ul>
 </div>
