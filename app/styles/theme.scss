@@ -25,10 +25,10 @@ p {
 // Buttons
 .btn-primary {
   background-color: $brand-gray;
-  border-color: $brand-light-gray;
+  border-color: $brand-light-gray !important;
   border-style: outset;
   border-width: 2px;
-  color: $brand-black;
+  color: $brand-black !important;
   font-weight: 200;
 
   @extend .drop-shadow;
@@ -42,8 +42,23 @@ p {
   @extend .large-shadow;
 }
 
+.btn-primary:focus, :active, :visited {
+  @extend .btn-primary;
+  background-color: $brand-gray !important;
+  font-weight: 400;
+  border-style: inset;
+
+  @extend .no-shadow;
+}
+
 
 // Shadows
+.no-shadow {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
 .drop-shadow {
   -webkit-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
   -moz-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);

@@ -1,6 +1,9 @@
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
-import { bind } from '@ember/runloop';
+import {
+  bind,
+  later
+} from '@ember/runloop';
 import { service } from '@ember-decorators/service';
 
 export default class WelcomeWindowComponent extends Component {
@@ -32,8 +35,13 @@ export default class WelcomeWindowComponent extends Component {
 
   @action
   executeGithubLink() {
-    // @ts-ignore
-    this.get('sendGithubRedirect')();
+    this.$('#github-link').focus();
+
+    later(() => {
+      // @ts-ignore
+      this.get('sendGithubRedirect')();
+      this.$('#github-link').blur();
+    }, 500);
   }
 
 }
