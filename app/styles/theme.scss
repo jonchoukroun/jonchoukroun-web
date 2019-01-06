@@ -1,10 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans');
 
+
+// -----------------------------------------------------------------------------
+// Color Variables
+// -----------------------------------------------------------------------------
+
 $brand-blue: #50526f;
 $brand-black: #141414;
 $brand-light-gray: #d1d1d1;
 $brand-gray: #a0a0a0;
 $brand-white: #f8f8f8;
+
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+h1 {
+  font-family: 'Inconsolata', monospace;
+  transform: scaleY(1.25);
+}
+
+p {
+  color: $brand-black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+// -----------------------------------------------------------------------------
 
 * {
   border-radius: 0 !important;
@@ -14,14 +37,6 @@ body {
   background-color: $brand-blue;
 }
 
-h1 {
-  font-family: 'Inconsolata', monospace;
-}
-
-p {
-  color: $brand-black;
-  font-family: 'Open Sans', sans-serif;
-}
 
 // Buttons
 .btn-primary {
@@ -43,7 +58,7 @@ p {
   @extend .large-shadow;
 }
 
-.btn-primary:focus, :active, :visited {
+.btn-primary:focus, .btn-primary:active, .btn-primary:visited {
   @extend .btn-primary;
   background-color: $brand-gray !important;
   font-weight: 400;
