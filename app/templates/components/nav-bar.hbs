@@ -8,12 +8,22 @@
         Home
       {{/link-to}}
     </li>
+
     <li>
       {{#link-to
         "projects"
         class="nav-item btn btn-primary"
       }}
         Projects
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to
+        "about"
+        class="nav-item btn btn-primary"
+      }}
+        About Jon
       {{/link-to}}
     </li>
   </ul>
@@ -41,6 +51,21 @@
         <div class="d-flex flex-row justify-content-between projects-link">
           <span>
             Projects
+          </span>
+
+          <span class="ml-20">|></span>
+        </div>
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to
+        "about"
+        class="list-group-item nav-item"
+      }}
+        <div class="d-flex flex-row justify-content-between projects-link">
+          <span>
+            About Jon
           </span>
 
           <span class="ml-20">|></span>
