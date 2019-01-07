@@ -70,6 +70,33 @@ body {
   @extend .no-shadow;
 }
 
+// Nav
+.nav {
+  background-color: $brand-gray !important;
+  @extend .drop-shadow;
+}
+
+.nav-item {
+  margin-bottom: 1px;
+  padding: 5px 1em;
+  background-color: $brand-gray !important;
+  color: $brand-black !important;
+
+  @extend .border;
+  @extend .border-gray;
+}
+
+a.nav-item:hover {
+  background-color: $brand-blue !important;
+  border-color: $brand-blue !important;
+  color: $brand-white;
+}
+a.nav-item:active,
+a.nav-item:focus,
+a.nav-item.active {
+  background-color: $brand-black !important;
+  color: $brand-white !important;
+}
 
 // Shadows
 .no-shadow {
