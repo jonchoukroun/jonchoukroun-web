@@ -1,17 +1,37 @@
-<div class="card project-card elevate-1">
-  <div class="card-header">
-    <p>{{project.name}}</p>
-  </div>
+<div class="card elevate-2">
+  <div class="project-card">
+    <div class="card-header">
+      <div class="d-flex flex-row align-items-center justify-content-between">
+        <p>{{project.name}}</p>
 
-  <img
-    src={{project.share_image}}
-    alt={{project.name}}
-    class="card-img-top"
-  >
+        <button
+          type="button"
+          data-toggle="collapse"
+          data-target="#{{cardId}}"
+          class="btn btn-secondary btn-sm mr-1"
+        >
+          <i class="fas fa-window-minimize"></i>
+        </button>
+      </div>
+    </div>
 
-  <div class="card-body">
-    <p class="card-text">
-      {{project.description}}
-    </p>
+    <div
+      id={{cardId}}
+      class="collapse show"
+    >
+      <div class="img-inset">
+        <img
+          src={{project.share_image}}
+          alt={{project.name}}
+          class="card-img-top"
+        >
+      </div>
+
+      <div class="card-body">
+        <p class="card-text">
+          {{project.description}}
+        </p>
+      </div>
+    </div>
   </div>
 </div>

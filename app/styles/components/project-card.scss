@@ -1,18 +1,30 @@
-.project-card {
+.card {
   @extend .drop-shadow;
-  @extend .border;
-  @extend .border-gray;
+  background-color: $brand-gray;
+  border: 2px outset $brand-gray;
+}
+
+.project-card {
+  margin: 1px;
 
   .card-header {
-    @extend .border;
-    @extend .border-gray;
+    border-bottom: 2px solid $brand-gray;
     background-color: $brand-black;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0;
 
     p {
       margin-bottom: 0;
+      margin-left: 1rem;
       font-weight: 800;
       color: $brand-white;
     }
   }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+.img-inset {
+  border: 2px inset $brand-gray;
 }

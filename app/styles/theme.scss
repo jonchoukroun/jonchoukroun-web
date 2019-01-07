@@ -70,6 +70,18 @@ body {
   @extend .no-shadow;
 }
 
+.btn-secondary {
+  @extend .btn-primary;
+
+  &:hover {
+    border-style: inset;
+    transform: translateY(0);
+
+    @extend .no-shadow;
+  }
+}
+
+
 // Nav
 .nav {
   background-color: $brand-gray !important;
@@ -81,8 +93,7 @@ body {
   padding: 5px 1em;
   background-color: $brand-gray !important;
   color: $brand-black !important;
-
-  @extend .border;
+  border-width: 2px;
   @extend .border-gray;
 }
 
@@ -106,9 +117,9 @@ a.nav-item.active {
 }
 
 .drop-shadow {
-  -webkit-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
-  -moz-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
-  box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(20,20,20,1);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(20,20,20,1);
+  box-shadow: 1px 1px 3px 1px rgba(20,20,20,1);
 }
 
 .large-shadow {
