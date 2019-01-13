@@ -1,10 +1,17 @@
 .card {
-  @extend .drop-shadow;
+  width: 30vw;
+  cursor: grab;
   background-color: $brand-gray;
   border: 2px outset $brand-gray;
+  @extend .drop-shadow;
+}
+
+.is-dragging {
+  cursor: grabbing;
 }
 
 .project-card {
+  width: 100%;
   margin: 1px;
 
   .card-header {
