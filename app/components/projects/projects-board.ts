@@ -21,15 +21,21 @@ export default class ProjectsBoardComponent extends Component {
     const cardWidth: number | undefined = this.$('.draggable-card').width();
     if (!cardWidth) { return; }
 
-    if (Math.floor(boardWidth / cardWidth) >= 2) {
-      const cards = this.$('.draggable-card').get();
-      let counter: number = 0;
-      cards.map(c => {
+    const cards = this.$('.draggable-card').get();
+    let counter: number = 0;
+    cards.map(c => {
+      if (Math.floor(boardWidth / cardWidth) >= 2) {
         this.$(c).css('left', counter);
         this.$(c).css('top', 150);
         counter += (cardWidth + 20);
-      });
-    }
+      } else {
+        counter += 50
+        const cardHeight: number = this.$('.draggable-card').height() || 10;
+        this.$(c).css('left', 40);
+        this.$(c).css('top', counter);
+        counter += (cardHeight - 35);
+      }
+    });
   }
 
   adjustPriorities(cardId: string): void {

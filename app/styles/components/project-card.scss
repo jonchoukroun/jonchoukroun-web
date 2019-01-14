@@ -1,5 +1,5 @@
 .draggable-card {
-  width: 30vw;
+  width: 80vw;
   position: absolute;
   cursor: grab;
 }
@@ -18,4 +18,10 @@
 
 .img-inset {
   border: 2px inset $brand-gray;
+}
+
+@media (min-width: 992px) {
+  .draggable-card {
+    width: 30vw;
+  }
 }

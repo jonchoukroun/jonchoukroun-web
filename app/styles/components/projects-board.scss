@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   bottom:0;
-  left: 15vw;
+  left: 0;
   z-index: 0;
 
   .non-drag-text {
@@ -24,5 +24,11 @@
 
   .drag-text {
     display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-board {
+    left: 15vw;
   }
 }
