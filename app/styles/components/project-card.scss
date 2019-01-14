@@ -1,5 +1,6 @@
 .card {
   width: 30vw;
+  position: absolute;
   cursor: grab;
   background-color: $brand-gray;
   border: 2px outset $brand-gray;

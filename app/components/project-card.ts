@@ -5,7 +5,7 @@ import {
 } from '@ember-decorators/component';
 import { observes } from '@ember-decorators/object';
 
-@classNames('card')
+@classNames('card elevate-1')
 
 export default class ProjectCardComponent extends Component {
 
@@ -44,6 +44,9 @@ export default class ProjectCardComponent extends Component {
 
   dragStart(e: any) {
     this.$().addClass('is-dragging');
+    this.$().removeClass((_idx: number, className: string) => {
+      return (className.match(/(^|\s)elevate-\S+/g) || []).join(' ');
+    })
     this.$().addClass('elevate-10');
 
     e.dataTransfer.setData('text', e.target.id);
@@ -58,6 +61,10 @@ export default class ProjectCardComponent extends Component {
 
   drop(e: any) {
     this.$('.project-card').removeClass('is-dragging');
+    this.$().removeClass((_idx: number, className: string) => {
+      return (className.match(/(^|\s)elevate-\S+/g) || []).join(' ');
+    });
+    this.$().addClass('elevate-2');
 
     const xy = e.dataTransfer.getData('position').split(',');
     this.set('x', e.clientX + parseInt(xy[0]));

@@ -1,15 +1,17 @@
-<div class="d-flex flex-column align-items-start justify-content-center h-100">
-  <div class="row">
-    {{#each-in projects as |idx project|}}
-      <div class="col">
-        <ProjectCard
-          @project={{project}}
-          @priority={{idx}}
-          @movedX={{cardX}}
-          @movedY={{cardY}}
-          @movedCardId={{cardId}}
-        />
-      </div>
-    {{/each-in}}
+<div class="d-flex flex-row justify-content-center">
+  <div class="col-sm-8 col-lg-5 col-xl-4 mt-50">
+    <h1 class="text-center">Projects</h1>
+    <p class="lead text-center non-drag-text">Drag and drop for better viewing.</p>
+    <p class="lead text-center drag-text">Release inside dark box to move.</p>
   </div>
 </div>
+
+{{#each-in projects as |idx project|}}
+  <ProjectCard
+    @project={{project}}
+    @priority={{idx}}
+    @movedX={{cardX}}
+    @movedY={{cardY}}
+    @movedCardId={{cardId}}
+  />
+{{/each-in}}

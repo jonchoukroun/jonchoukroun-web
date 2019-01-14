@@ -4,7 +4,7 @@ const projects = [
   {
     name:        'Future Butcher',
     share_image: 'https://s3-us-west-1.amazonaws.com/futurebutcher.com/assets/share-image.png',
-    description: 'Turn-based strategy game set in a dark future.',
+    description: 'Turn-based strategy game set in a dark, man-eat-man future.',
     project_url: 'https://www.futurebutcher.com',
     link_text:   'Play',
     stack: [
