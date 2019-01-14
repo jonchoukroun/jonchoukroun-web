@@ -1,11 +1,13 @@
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
+import { classNames } from '@ember-decorators/component';
 import {
   bind,
   later
 } from '@ember/runloop';
 import { service } from '@ember-decorators/service';
 
+@classNames('window elevate-2')
 export default class WelcomeWindowComponent extends Component {
 
   @service keyManager:any;
@@ -42,7 +44,7 @@ export default class WelcomeWindowComponent extends Component {
 
   willDestroyElement() {
     super.willDestroyElement();
-    
+
     const keyManager = this.get('keyManager');
     keyManager.removeMacro(this.githubLinkMacro);
     keyManager.removeMacro(this.projectsLinkMacro);

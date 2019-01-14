@@ -7,11 +7,13 @@
 </div>
 
 {{#each-in projects as |idx project|}}
-  <ProjectCard
-    @project={{project}}
-    @priority={{idx}}
-    @movedX={{cardX}}
-    @movedY={{cardY}}
-    @movedCardId={{cardId}}
-  />
+  {{#let (component "projects/project-card") as |ProjectCard|}}
+    <ProjectCard
+      @project={{project}}
+      @priority={{idx}}
+      @movedX={{cardX}}
+      @movedY={{cardY}}
+      @movedCardId={{cardId}}
+    />
+  {{/let}}
 {{/each-in}}

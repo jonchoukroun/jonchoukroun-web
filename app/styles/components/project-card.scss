@@ -1,10 +1,7 @@
-.card {
+.draggable-card {
   width: 30vw;
   position: absolute;
   cursor: grab;
-  background-color: $brand-gray;
-  border: 2px outset $brand-gray;
-  @extend .drop-shadow;
 }
 
 .is-dragging {
@@ -12,21 +9,7 @@
 }
 
 .project-card {
-  width: 100%;
-  margin: 1px;
-
-  .card-header {
-    border-bottom: 2px solid $brand-gray;
-    background-color: $brand-black;
-    padding: 0.25rem 0;
-
-    p {
-      margin-bottom: 0;
-      margin-left: 1rem;
-      font-weight: 800;
-      color: $brand-white;
-    }
-  }
+  @extend .window-card;
 
   .card-body {
     padding: 1rem;

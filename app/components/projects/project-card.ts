@@ -3,9 +3,12 @@ import {
   attribute,
   classNames
 } from '@ember-decorators/component';
-import { observes } from '@ember-decorators/object';
+import {
+  computed,
+  observes
+} from '@ember-decorators/object';
 
-@classNames('card elevate-1')
+@classNames('window draggable-card elevate-1')
 
 export default class ProjectCardComponent extends Component {
 
@@ -32,6 +35,13 @@ export default class ProjectCardComponent extends Component {
       this.set('x', x);
       this.set('y', y);
     }
+  }
+
+  @computed('project.name')
+  get cardBodyId() {
+    let name = this.project.name.split(' ')
+    name.push('body');
+    return name.join('-');
   }
 
   @observes('x', 'y')

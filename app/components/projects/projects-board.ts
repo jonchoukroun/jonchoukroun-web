@@ -18,11 +18,11 @@ export default class ProjectsBoardComponent extends Component {
     const boardDimensions: DOMRect | ClientRect = this.element.getBoundingClientRect();
     const boardWidth: number = boardDimensions.width;
 
-    const cardWidth: number | undefined = this.$('.card').width();
+    const cardWidth: number | undefined = this.$('.draggable-card').width();
     if (!cardWidth) { return; }
 
     if (Math.floor(boardWidth / cardWidth) >= 2) {
-      const cards = this.$('.card').get();
+      const cards = this.$('.draggable-card').get();
       let counter: number = 0;
       cards.map(c => {
         this.$(c).css('left', counter);
@@ -33,12 +33,12 @@ export default class ProjectsBoardComponent extends Component {
   }
 
   adjustPriorities(cardId: string): void {
-    const cards = this.$('.card').get();
+    const cards = this.$('.draggable-card').get();
     cards.map(c => {
       this.$(c).removeClass((_idx: number, className: string) => {
         return (className.match(/(^|\s)elevate-\S+/g) || []).join(' ');
       });
-      
+
       if (c.id === cardId) {
         this.$(c).addClass('elevate-2');
       } else {

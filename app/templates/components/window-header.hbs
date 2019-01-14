@@ -1,0 +1,26 @@
+<div class="d-flex flex-row align-items-center justify-content-between">
+  <p>{{windowTitle}}</p>
+
+  <div class="buttons flex-row align-items-end mr-1">
+    {{#if showMinimizeButton}}
+      <button
+        type="button"
+        data-toggle="collapse"
+        data-target="#{{cardBodyId}}"
+        class="btn btn-secondary btn-sm"
+      >
+        <i class="fas fa-window-minimize"></i>
+      </button>
+    {{/if}}
+
+    {{#if showCloseButton}}
+      <button
+        type="button"
+        class="btn btn-secondary btn-sm"
+        {{action "closeWindow"}}
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    {{/if}}
+  </div>
+</div>
