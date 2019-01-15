@@ -59,7 +59,6 @@ export default class ProjectsBoardComponent extends Component {
 
   resetPriorities(cardId: string): void {
     const cards = this.$('.draggable-card').get();
-    console.log('cards', cards);
 
     let movedCard = this.$(`#${cardId}`);
     movedCard.removeClass((_idx: number, className: string) => {

@@ -68,17 +68,4 @@ export default class ProjectCardComponent extends Component {
     e.dataTransfer.dropEffect = 'move';
     e.dataTransfer.setData('position', `${x},${y}`);
   }
-
-  drop(e: any) {
-    this.$('.project-card').removeClass('is-dragging');
-    this.$().removeClass((_idx: number, className: string) => {
-      return (className.match(/(^|\s)elevate-\S+/g) || []).join(' ');
-    });
-    this.$().addClass('elevate-2');
-
-    const xy = e.dataTransfer.getData('position').split(',');
-    this.set('x', e.clientX + parseInt(xy[0]));
-    this.set('y', e.clientY + parseInt(xy[1]));
-  }
-
 }
