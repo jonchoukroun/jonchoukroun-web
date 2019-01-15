@@ -1,12 +1,16 @@
 .window-header {
   border-bottom: 2px solid $brand-gray;
-  background-color: $brand-black;
-  padding: 0.25rem 0;
+  background-color: $brand-blue;
+  padding: 0;
 
   p {
     margin-bottom: 0;
     margin-left: 1rem;
     font-weight: 800;
     color: $brand-white;
+  }
+
+  button {
+    // height: 10px;
   }
 }

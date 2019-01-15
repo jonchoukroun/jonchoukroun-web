@@ -5,10 +5,11 @@
 // Color Variables
 // -----------------------------------------------------------------------------
 
-$brand-blue: #50526f;
+$brand-green: #008080;
+$brand-blue: #000080;
 $brand-black: #141414;
-$brand-light-gray: #d1d1d1;
-$brand-gray: #a0a0a0;
+$brand-light-gray: #ffffff;
+$brand-gray: #c0c0c0;
 $brand-white: #f8f8f8;
 
 
@@ -17,13 +18,14 @@ $brand-white: #f8f8f8;
 // -----------------------------------------------------------------------------
 
 h1 {
-  font-family: 'Inconsolata', monospace;
-  transform: scaleY(1.25);
+  font-family: 'Times New Roman', sans-serif;
+  font-weight: bold;
+  transform: scaleX(1.1);
 }
 
 p {
   color: $brand-black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 
@@ -34,7 +36,7 @@ p {
 }
 
 body {
-  background-color: $brand-blue;
+  background-color: $brand-green;
 }
 
 
@@ -56,9 +58,10 @@ body {
 
 .btn-primary:hover {
   @extend .btn-primary;
-  font-weight: 400;
-  transform: translateY(-2px);
-  @extend .large-shadow;
+
+  .btn-inner {
+    border: 1px dotted $brand-black;
+  }
 }
 
 .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
@@ -81,6 +84,11 @@ body {
   }
 }
 
+.btn-inner {
+  border-width: 1px;
+  border-style: dashed;
+  border-color: $brand-gray;
+}
 
 // Nav
 .nav {
