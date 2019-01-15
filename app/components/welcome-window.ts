@@ -15,6 +15,8 @@ export default class WelcomeWindowComponent extends Component {
   didInsertElement() {
     super.didInsertElement();
     this.$().focus();
+    this.$('.window-header').removeClass('top-window');
+    this.$('.window-header').addClass('top-window');
   }
 
   githubLinkMacro = this.setGithubLinkMacro();

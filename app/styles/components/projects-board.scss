@@ -4,6 +4,7 @@
   right: 0;
   bottom: 0.5vh;
   left: 0;
+  border: 2px dashed $brand-green;
   z-index: 0;
 
   .non-drag-text {
@@ -17,7 +18,7 @@
 
 .dragged-over {
   background-color: rgba(0,0,0,0.2);
-  border: 1px dashed $brand-gray;
+  border: 2px dashed $brand-gray;
 
   .non-drag-text {
     display: none;

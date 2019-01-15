@@ -8,10 +8,10 @@
 $brand-green: #008080;
 $brand-blue: #000080;
 $brand-black: #141414;
-$brand-light-gray: #ffffff;
+$brand-light-gray: #f8f8f8;
 $brand-gray: #c0c0c0;
 $brand-dark-gray: #7f787f;
-$brand-white: #f8f8f8;
+$brand-white: #ffffff;
 
 
 // -----------------------------------------------------------------------------
@@ -22,11 +22,18 @@ h1 {
   font-family: 'Times New Roman', sans-serif;
   font-weight: bold;
   transform: scaleX(1.1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 p {
   color: $brand-black;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
 }
 
 

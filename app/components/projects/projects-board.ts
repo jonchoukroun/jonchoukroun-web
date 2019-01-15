@@ -19,7 +19,7 @@ export default class ProjectsBoardComponent extends Component {
     const cards = this.$('.draggable-card').get();
 
     let topCounter: number = 100;
-    let leftCounter: number = 50;
+    let leftCounter: number = 150;
     cards.map(c => {
       let el = this.$(c);
 
@@ -29,7 +29,6 @@ export default class ProjectsBoardComponent extends Component {
 
         leftCounter += 100;
         topCounter += 100;
-
       } else {
         const cardHeight: number = this.$('.draggable-card').height() || 10;
         el.css('left', 40);
