@@ -8,7 +8,7 @@ import {
   observes
 } from '@ember-decorators/object';
 
-@classNames('window draggable-card elevate-1')
+@classNames('window draggable-card')
 
 export default class ProjectCardComponent extends Component {
 
@@ -56,7 +56,7 @@ export default class ProjectCardComponent extends Component {
     this.$().addClass('is-dragging');
     this.$().removeClass((_idx: number, className: string) => {
       return (className.match(/(^|\s)elevate-\S+/g) || []).join(' ');
-    })
+    });
     this.$().addClass('elevate-10');
 
     e.dataTransfer.setData('text', e.target.id);

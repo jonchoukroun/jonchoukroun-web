@@ -18,9 +18,13 @@
 
 .img-inset {
   border: 2px inset $brand-gray;
+
+  &:hover {
+    cursor: auto;
+  }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .draggable-card {
     width: 30vw;
   }

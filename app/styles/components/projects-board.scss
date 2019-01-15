@@ -1,8 +1,8 @@
 .projects-board {
   position: absolute;
-  top: 0;
+  top: 1vh;
   right: 0;
-  bottom:0;
+  bottom: 1vh;
   left: 0;
   z-index: 0;
 
@@ -17,6 +17,7 @@
 
 .dragged-over {
   background-color: rgba(0,0,0,0.2);
+  border: 1px dashed $brand-gray;
 
   .non-drag-text {
     display: none;
@@ -27,8 +28,9 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .projects-board {
-    left: 15vw;
+    left: 10vw;
+    right: 10vw;
   }
 }

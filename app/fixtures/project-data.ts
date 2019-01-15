@@ -43,6 +43,23 @@ const projects = [
         github_link: `${github_root}/william_storck_admin`
       }
     ]
+  },
+  {
+    name:        'Reshot',
+    share_image: 'https://assets-static.reshot-cdn.com/social-meta/reshot-facebook-og-image.jpg',
+    description: 'Free handpicked, authentic photos',
+    project_url: 'https://www.reshot.com',
+    link_text:   'View',
+    stack: [
+      {
+        tech:        'Ruby/Sinatra',
+        description: 'JSON API serves a curated photo collection, along with photographer data. Also handles download and notification requests.'
+      },
+      {
+        tech:        'Ember.js',
+        description: 'Showcases authentic photos in simple CSS grid layout. Uses Fastboot for server-side rendering.'
+      }
+    ]
   }
 ]
 
