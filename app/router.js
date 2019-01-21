@@ -14,6 +14,8 @@ Router.map(function() {
   this.route('about');
 
   this.route('blog');
+
+  this.route('settings');
 });
 
 export default Router;

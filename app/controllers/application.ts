@@ -10,6 +10,7 @@ export default class ApplicationController extends Controller {
   projectsLinkMacro = this.setLinkMacro('projects', 'p');
   aboutLinkMacro = this.setLinkMacro('about', 'a');
   blogLinkMacro = this.setLinkMacro('blog', 'b');
+  settingsLinkMacro = this.setLinkMacro('settings', 's');
 
   setLinkMacro(link: string, key: string) {
     return this.keyManager.addMacro({
@@ -33,5 +34,6 @@ export default class ApplicationController extends Controller {
     this.keyManager.removeMacro(this.homeLinkMacro);
     this.keyManager.removeMacro(this.projectsLinkMacro);
     this.keyManager.removeMacro(this.aboutLinkMacro);
+    this.keyManager.removeMacro(this.settingsLinkMacro);
   }
 }
