@@ -104,6 +104,7 @@ export default class ProjectsBoardComponent extends Component {
   }
 
   drop(e: any) {
+    e.preventDefault();
     const cardId = e.dataTransfer.getData('text');
     if (!cardId) { return; }
 
