@@ -1,0 +1,27 @@
+<div
+  class="d-flex flex-column justify-content-start p-0 window-card"
+>
+  <WindowHeader
+    @windowId={{this.elementId}}
+    @cardBodyId="settings-body"
+    @windowTitle="System Properties"
+    @icon="settings"
+    @showMinimizeButton={{true}}
+    @showCloseButton={{true}}
+  />
+
+  <div id="settings-body" class="bg-gray">
+    <div class="d-flex flex-row justify-content-start align-items-end py-1">
+      <span class="mx-1"><u>F</u>ile</span>
+      <span class="mx-1"><u>V</u>iew</span>
+    </div>
+
+    <div class="inner-panel">
+      <div class="d-flex flex-column align-items-start justify-content-start">
+        <p><u>C</u>hange Background...</p>
+        <p><u>M</u>ouse trails...</p>
+      </div>
+    </div>
+
+  </div>
+</div>
