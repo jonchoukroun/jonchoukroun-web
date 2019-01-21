@@ -9,6 +9,7 @@ export default class ApplicationController extends Controller {
   homeLinkMacro = this.setLinkMacro('home', 'h');
   projectsLinkMacro = this.setLinkMacro('projects', 'p');
   aboutLinkMacro = this.setLinkMacro('about', 'a');
+  blogLinkMacro = this.setLinkMacro('blog', 'b');
 
   setLinkMacro(link: string, key: string) {
     return this.keyManager.addMacro({
