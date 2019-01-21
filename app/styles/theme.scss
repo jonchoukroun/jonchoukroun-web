@@ -100,29 +100,37 @@ body {
 
 // Nav
 .nav {
-  background-color: $brand-gray !important;
-  @extend .drop-shadow;
+  background-color: transparent;
 }
 
 .nav-item {
-  margin-bottom: 1px;
+  margin: 20px;
   padding: 5px 1em;
-  background-color: $brand-gray !important;
-  color: $brand-black !important;
-  border-width: 2px;
-  @extend .border-gray;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: transparent;
+
+  p {
+    color: $brand-white;
+  }
+
+  .link-icon {
+    margin-bottom: 5px;
+
+    img {
+      width: 130%;
+      margin-left: -10%;
+    }
+  }
 }
 
-a.nav-item:hover {
-  background-color: $brand-blue !important;
-  border-color: $brand-blue !important;
-  color: $brand-white;
-}
+a.nav-item:hover,
 a.nav-item:active,
 a.nav-item:focus,
 a.nav-item.active {
-  background-color: $brand-black !important;
-  color: $brand-white !important;
+  background-color: transparent;
+  color: $brand-white;
+  border-color: transparent;
 }
 
 // Shadows
