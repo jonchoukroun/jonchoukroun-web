@@ -5,11 +5,13 @@
 // Color Variables
 // -----------------------------------------------------------------------------
 
-$brand-blue: #50526f;
+$brand-green: #008080;
+$brand-blue: #000080;
 $brand-black: #141414;
-$brand-light-gray: #d1d1d1;
-$brand-gray: #a0a0a0;
-$brand-white: #f8f8f8;
+$brand-light-gray: #f8f8f8;
+$brand-gray: #c0c0c0;
+$brand-dark-gray: #7f787f;
+$brand-white: #ffffff;
 
 
 // -----------------------------------------------------------------------------
@@ -17,13 +19,21 @@ $brand-white: #f8f8f8;
 // -----------------------------------------------------------------------------
 
 h1 {
-  font-family: 'Inconsolata', monospace;
-  transform: scaleY(1.25);
+  font-family: 'Times New Roman', sans-serif;
+  font-weight: bold;
+  transform: scaleX(1.1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 p {
   color: $brand-black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
 }
 
 
@@ -34,7 +44,7 @@ p {
 }
 
 body {
-  background-color: $brand-blue;
+  background-color: $brand-green;
 }
 
 
@@ -56,9 +66,10 @@ body {
 
 .btn-primary:hover {
   @extend .btn-primary;
-  font-weight: 400;
-  transform: translateY(-2px);
-  @extend .large-shadow;
+
+  .btn-inner {
+    border: 1px dotted $brand-black;
+  }
 }
 
 .btn-primary:focus, .btn-primary:active, .btn-primary:visited {
@@ -68,6 +79,23 @@ body {
   border-style: inset;
 
   @extend .no-shadow;
+}
+
+.btn-secondary {
+  @extend .btn-primary;
+
+  &:hover {
+    border-style: inset;
+    transform: translateY(0);
+
+    @extend .no-shadow;
+  }
+}
+
+.btn-inner {
+  border-width: 1px;
+  border-style: dashed;
+  border-color: $brand-gray;
 }
 
 // Nav
@@ -81,8 +109,7 @@ body {
   padding: 5px 1em;
   background-color: $brand-gray !important;
   color: $brand-black !important;
-
-  @extend .border;
+  border-width: 2px;
   @extend .border-gray;
 }
 
@@ -106,9 +133,9 @@ a.nav-item.active {
 }
 
 .drop-shadow {
-  -webkit-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
-  -moz-box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
-  box-shadow: 1px 1px 1px 1px rgba(20,20,20,1);
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(20,20,20,1);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(20,20,20,1);
+  box-shadow: 1px 1px 3px 1px rgba(20,20,20,1);
 }
 
 .large-shadow {

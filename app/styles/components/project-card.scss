@@ -1,0 +1,31 @@
+.draggable-card {
+  width: 80vw;
+  position: absolute;
+  cursor: grab;
+}
+
+.is-dragging {
+  cursor: grabbing;
+}
+
+.project-card {
+  @extend .window-card;
+
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+.img-inset {
+  border: 2px inset $brand-gray;
+
+  &:hover {
+    cursor: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .draggable-card {
+    width: 30vw;
+  }
+}

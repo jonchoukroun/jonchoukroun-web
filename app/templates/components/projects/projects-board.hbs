@@ -1,0 +1,19 @@
+<div class="d-flex flex-row justify-content-center">
+  <div class="col-sm-8 col-lg-5 col-xl-4 mt-50">
+    <h1 class="text-center">Projects</h1>
+    <p class="text-center non-drag-text text-light">Drag and drop for better viewing.</p>
+    <p class="text-center drag-text text-light">Release inside dark box to move.</p>
+  </div>
+</div>
+
+{{#each-in projects as |idx project|}}
+  {{#let (component "projects/project-card") as |ProjectCard|}}
+    <ProjectCard
+      @project={{project}}
+      @priority={{idx}}
+      @movedX={{cardX}}
+      @movedY={{cardY}}
+      @movedCardId={{cardId}}
+    />
+  {{/let}}
+{{/each-in}}

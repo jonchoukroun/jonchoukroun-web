@@ -1,0 +1,28 @@
+<div class="project-card">
+  <WindowHeader
+    @windowId={{this.elementId}}
+    @cardBodyId={{cardBodyId}}
+    @windowTitle={{project.name}}
+    @showMinimizeButton={{true}}
+    @showCloseButton={{false}}
+  />
+
+  <div
+    id={{cardBodyId}}
+    class="collapse show"
+  >
+    <div class="img-inset">
+      <img
+        src={{project.share_image}}
+        alt={{project.name}}
+        class="card-img-top"
+      >
+    </div>
+
+    <div class="card-body">
+      <p class="card-text">
+        {{project.description}}
+      </p>
+    </div>
+  </div>
+</div>

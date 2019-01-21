@@ -1,0 +1,21 @@
+.window-header {
+  border-bottom: 2px solid $brand-gray;
+  background-color: $brand-dark-gray;
+  padding: 0;
+
+  p {
+    margin-bottom: 0;
+    margin-left: 1rem;
+    font-weight: 800;
+    color: $brand-gray;
+  }
+}
+
+.top-window {
+  @extend .window-header;
+  background-color: $brand-blue;
+
+  p {
+    color: $brand-white;
+  }
+}

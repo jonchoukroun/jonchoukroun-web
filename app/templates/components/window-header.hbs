@@ -1,0 +1,30 @@
+<div class="d-flex flex-row align-items-center justify-content-between py-1">
+  <p>{{windowTitle}}</p>
+
+  <div class="flex-row align-items-end mr-1">
+    {{#if showMinimizeButton}}
+      <button
+        type="button"
+        data-toggle="collapse"
+        data-target="#{{cardBodyId}}"
+        class="btn btn-primary btn-sm p-0"
+      >
+        <div class="btn-inner px-1">
+          <i class="fas fa-window-minimize"></i>
+        </div>
+      </button>
+    {{/if}}
+
+    {{#if showCloseButton}}
+      <button
+        type="button"
+        class="btn btn-primary btn-sm p-0"
+        {{action "closeWindow"}}
+      >
+        <div class="btn-inner px-1">
+          <i class="fas fa-times"></i>
+        </div>
+      </button>
+    {{/if}}
+  </div>
+</div>

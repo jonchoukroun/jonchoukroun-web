@@ -1,0 +1,10 @@
+.window {
+  background-color: $brand-gray;
+  border: 2px outset $brand-gray;
+  @extend .drop-shadow;
+}
+
+.window-card {
+  width: 100%;
+  margin: 1px;
+}
