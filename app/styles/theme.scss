@@ -111,7 +111,7 @@ body {
   border-color: transparent;
 
   p {
-    color: $brand-white;
+    color: $brand-gray;
   }
 
   .link-icon {
@@ -129,8 +129,9 @@ a.nav-item:active,
 a.nav-item:focus,
 a.nav-item.active {
   background-color: transparent;
-  color: $brand-white;
   border-color: transparent;
+
+  p { color: $brand-white; }
 }
 
 // Shadows

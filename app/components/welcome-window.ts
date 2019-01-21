@@ -10,7 +10,7 @@ import { service } from '@ember-decorators/service';
 @classNames('window elevate-2')
 export default class WelcomeWindowComponent extends Component {
 
-  @service keyManager:any;
+  @service keyManager: any;
 
   didInsertElement() {
     super.didInsertElement();
