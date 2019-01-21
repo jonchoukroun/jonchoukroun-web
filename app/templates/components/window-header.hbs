@@ -1,5 +1,10 @@
 <div class="d-flex flex-row align-items-center justify-content-between py-1">
-  <p>{{windowTitle}}</p>
+  <div class="d-flex flex-row align-items-center justify-content-left m-0 p-0">
+    <div class="header-icon">
+      <img src={{iconSource}} alt={{iconAlt}}>
+    </div>
+    <p>{{windowTitle}}</p>
+  </div>
 
   <div class="flex-row align-items-end mr-1">
     {{#if showMinimizeButton}}
