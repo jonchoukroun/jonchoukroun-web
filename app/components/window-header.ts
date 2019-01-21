@@ -19,7 +19,7 @@ export default class WindowHeaderComponent extends Component{
 
   @computed('icon')
   get iconSource() {
-    return `/assets/icons/${this.icon}.png`;
+    return `https://s3-us-west-1.amazonaws.com/jonchoukroun.com/icons/${this.icon}.png`;
   }
 
   @computed('icon')
