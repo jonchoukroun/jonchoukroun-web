@@ -12,6 +12,10 @@ Router.map(function() {
   this.route('projects');
 
   this.route('about');
+
+  this.route('blog');
+
+  this.route('settings');
 });
 
 export default Router;

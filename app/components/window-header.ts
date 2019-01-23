@@ -1,5 +1,8 @@
 import Component from '@ember/component';
-import { action } from '@ember-decorators/object';
+import {
+  action,
+  computed
+} from '@ember-decorators/object';
 import { classNames } from '@ember-decorators/component';
 
 @classNames('window-header')
@@ -9,9 +12,20 @@ export default class WindowHeaderComponent extends Component{
   windowId!: string;
   cardBodyId!: string;
   windowTitle!: string;
+  icon!: string;
 
   showMinimizeButton!: boolean;
   showCloseButton!: boolean;
+
+  @computed('icon')
+  get iconSource() {
+    return `https://s3-us-west-1.amazonaws.com/jonchoukroun.com/icons/${this.icon}.png`;
+  }
+
+  @computed('icon')
+  get iconAlt() {
+    return `${this.icon} icon`;
+  }
 
   @action
   closeWindow() {

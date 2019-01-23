@@ -36,9 +36,13 @@
         "home"
         class="list-group-item nav-item"
       }}
-        <div class="d-flex flex-row justify-content-between home-link">
-          <span>Home</span>
-          <span class="ml-20">|></span>
+        <div
+          class="d-flex flex-column align-items-center justify-content-end"
+        >
+          <span class="link-icon">
+            <img src="{{baseIconUrl}}/home.png" alt="Home icon">
+          </span>
+          <p><u>H</u>ome</p>
         </div>
       {{/link-to}}
     </li>
@@ -48,12 +52,13 @@
         "projects"
         class="list-group-item nav-item"
       }}
-        <div class="d-flex flex-row justify-content-between projects-link">
-          <span>
-            Projects
+        <div
+          class="d-flex flex-column align-items-center justify-content-end"
+        >
+          <span class="link-icon">
+            <img src="{{baseIconUrl}}/applications.png" alt="Projects icon">
           </span>
-
-          <span class="ml-20">|></span>
+          <p><u>P</u>rojects</p>
         </div>
       {{/link-to}}
     </li>
@@ -63,12 +68,45 @@
         "about"
         class="list-group-item nav-item"
       }}
-        <div class="d-flex flex-row justify-content-between projects-link">
-          <span>
-            About
+        <div
+          class="d-flex flex-column align-items-center justify-content-end"
+        >
+          <span class="link-icon">
+            <img src="{{baseIconUrl}}/globe.png" alt="About icon">
           </span>
+          <p><u>A</u>bout</p>
+        </div>
+      {{/link-to}}
+    </li>
 
-          <span class="ml-20">|></span>
+    <li>
+      {{#link-to
+        "blog"
+        class="list-group-item nav-item"
+      }}
+        <div
+          class="d-flex flex-column align-items-center justify-content-end"
+        >
+          <span class="link-icon">
+            <img src="{{baseIconUrl}}/text-file.png" alt="Blog icon">
+          </span>
+          <p><u>B</u>log</p>
+        </div>
+      {{/link-to}}
+    </li>
+
+    <li>
+      {{#link-to
+        "settings"
+        class="list-group-item nav-item"
+      }}
+        <div
+          class="d-flex flex-column align-items-center justify-content-end"
+        >
+          <span class="link-icon">
+            <img src="{{baseIconUrl}}/settings.png" alt="Blog icon">
+          </span>
+          <p><u>S</u>ettings</p>
         </div>
       {{/link-to}}
     </li>

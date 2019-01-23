@@ -5,9 +5,16 @@
 
   p {
     margin-bottom: 0;
-    margin-left: 1rem;
     font-weight: 800;
     color: $brand-gray;
+  }
+}
+
+.header-icon {
+  margin: 0 5px;
+
+  img {
+    width: 80%;
   }
 }
 

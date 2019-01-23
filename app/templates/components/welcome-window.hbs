@@ -5,6 +5,7 @@
     @windowId={{this.elementId}}
     @cardBodyId=""
     @windowTitle="Welcome!"
+    @icon="computer"
     @showMinimizeButton={{false}}
     @showCloseButton={{true}}
   />
@@ -22,6 +23,14 @@
     >
       Full stack engineer
     </p>
+
+    <div class="inner-panel">
+      <p
+        class="text-center"
+      >
+        This site is a work in progress. Please visit again soon for more info on my projects.
+      </p>
+    </div>
   </div>
 
   <div class="d-flex flex-row justify-content-center mb-3 px-5">
@@ -48,5 +57,9 @@
         <u>P</u>rojects
       </div>
     {{/link-to}}
+  </div>
+
+  <div class="d-none d-md-flex justify-content-center">
+    <p class="small">Use the underlined keyboard shortcuts for easier navigation.</p>
   </div>
 </div>

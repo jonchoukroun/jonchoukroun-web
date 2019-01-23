@@ -1,77 +1,75 @@
 import Component from '@ember/component';
 import { action } from '@ember-decorators/object';
-import { classNames } from '@ember-decorators/component';
 import {
   bind,
   later
 } from '@ember/runloop';
+import { classNames } from '@ember-decorators/component';
 import { service } from '@ember-decorators/service';
 
 @classNames('window elevate-2')
 export default class WelcomeWindowComponent extends Component {
 
-  @service keyManager:any;
+  @service keyManager: any;
+
+  sendProjectsRedirect!: any;
+  githubLinkMacro = this.setLinkMacro('github');
+  projectsLinkMacro = this.setLinkMacro('projects');
 
   didInsertElement() {
     super.didInsertElement();
+
     this.$().focus();
     this.$('.window-header').removeClass('top-window');
     this.$('.window-header').addClass('top-window');
   }
 
-  githubLinkMacro = this.setGithubLinkMacro();
-  projectsLinkMacro = this.setProjectsLinkMacro();
-
-  setGithubLinkMacro() {
-    return this.get('keyManager').addMacro({
-      callback: bind(this, () => {
-        this.send('executeGithubLink');
-      }),
-      modifierKeys: ['Shift'],
-      executionKey: 'g',
-      keyEvent: 'keydown'
-    });
-  }
-
-  setProjectsLinkMacro() {
-    return this.get('keyManager').addMacro({
-      callback: bind(this, () => {
-        this.send('executeProjectsLink');
-      }),
-      modifierKeys: ['Shift'],
-      executionKey: 'p',
-      keyEvent: 'keydown'
-    });
-  }
-
   willDestroyElement() {
     super.willDestroyElement();
 
-    const keyManager = this.get('keyManager');
-    keyManager.removeMacro(this.githubLinkMacro);
-    keyManager.removeMacro(this.projectsLinkMacro);
+    this.keyManager.removeMacro(this.githubLinkMacro);
+    this.keyManager.removeMacro(this.projectsLinkMacro);
+  }
+
+  setLinkMacro(link: string) {
+    let actionName: string;
+    let key: string = link.split('')[0];
+    if (link === 'github') {
+      actionName = 'executeGithubLink';
+    } else {
+      actionName = 'executeProjectsLink';
+    }
+
+    return this.keyManager.addMacro({
+      callback: bind(this, () => {
+        this.send(actionName);
+      }),
+      modifierKeys: ['Shift'],
+      executionKey: key,
+      keyEvent: 'keydown',
+      priority: 1
+    });
   }
 
   @action
   executeGithubLink() {
-    this.$('#github-link').focus();
+    const el = this.$('#github-link');
+    el.focus();
 
     later(() => {
-      // @ts-ignore
-      this.get('sendGithubRedirect')();
-      this.$('#github-link').blur();
-    }, 500);
+      window.open('https://github.com/jonchoukroun', '_blank');
+      el.blur();
+    }, 200);
   }
 
   @action
   executeProjectsLink() {
-    this.$('#projects-link').focus();
+    const el = this.$('#projects-link');
+    el.focus();
 
     later(() => {
-      // @ts-ignore
       this.get('sendProjectsRedirect')();
-      this.$('#project-link').blur();
-    }, 500);
+      el.blur();
+    }, 200);
   }
-
 }
