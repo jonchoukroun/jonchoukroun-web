@@ -1,8 +1,51 @@
-.inner-panel {
-  margin: 5px 3px 3px;
-  padding: 2.5px 5px;
-  background-color: $brand-white;
-  border-width: 2px;
-  border-style: inset;
-  border-color: $brand-gray;
+#settings-body {
+  .nav {
+    display: inline-flex;
+  }
+
+  .nav-tabs {
+    border: none;
+
+    .nav-item {
+      padding: 2.5px 10px;
+      border-top-right-radius: 6px !important;
+      border-top-left-radius: 6px !important;
+      border-width: 2px;
+      border-style: outset;
+      border-bottom-style: none;
+      border-color: $brand-light-gray;
+      transform: translateY(-1px);
+    }
+
+    :not(.active) {
+      border-color: $brand-light-gray;
+      border-bottom-style: inset;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+
+  .tab-filler {
+    border-width: 2px;
+    border-bottom-style: inset;
+    border-color: $brand-light-gray;
+  }
+
+  .front {
+    width: 5px;
+  }
+
+  .end {
+    flex: 1;
+  }
+
+  .settings-body {
+    padding: 20px;
+    border-color: $brand-light-gray;
+    border-style: outset;
+    border-top-style: none;
+    border-width: 2px;
+
+    @extend .raised-shadow;
+  }
 }

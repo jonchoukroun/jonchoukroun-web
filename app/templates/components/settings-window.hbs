@@ -10,18 +10,35 @@
     @showCloseButton={{true}}
   />
 
-  <div id="settings-body" class="bg-gray">
-    <div class="d-flex flex-row justify-content-start align-items-end py-1">
-      <span class="mx-1"><u>F</u>ile</span>
-      <span class="mx-1"><u>V</u>iew</span>
+  <div id="settings-body" class="bg-gray m-3">
+    <div class="d-flex">
+      <div class="tab-filler front"></div>
+      <ul class="nav nav-tabs">
+        <li class="nav-item active">
+          General
+        </li>
+        <li class="nav-item">
+          Other
+        </li>
+      </ul>
+      <div class="tab-filler end"></div>
     </div>
 
-    <div class="inner-panel">
-      <div class="d-flex flex-column align-items-start justify-content-start">
-        <p><u>C</u>hange Background...</p>
-        <p><u>M</u>ouse trails...</p>
+    <div class="settings-body">
+      <div class="custom-control custom-radio">
+        <input
+          type="radio"
+          id="mouseTrailsRadio"
+          name="trailsSelector"
+          class="custom-control-input"
+        >
+        <label
+          for="mouseTrailsRadio"
+          class="custom-control-label"
+        >
+          Turn on mouse trails
+        </label>
       </div>
     </div>
-
   </div>
 </div>

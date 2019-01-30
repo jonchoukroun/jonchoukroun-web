@@ -3,4 +3,35 @@
   top: 2px;
   left: 1px;
   z-index: 0;
+
+  .nav-item {
+    margin: 20px;
+    padding: 5px 1em;
+    background-color: transparent;
+    border-width: 1px;
+    border-color: transparent;
+
+    p {
+      color: $brand-gray;
+    }
+
+    .link-icon {
+      margin-bottom: 5px;
+
+      img {
+        width: 130%;
+        margin-left: -10%;
+      }
+    }
+  }
+
+  a.nav-item:hover,
+  a.nav-item:active,
+  a.nav-item:focus,
+  a.nav-item.active {
+    background-color: transparent;
+    border-color: transparent;
+
+    p { color: $brand-white; }
+  }
 }

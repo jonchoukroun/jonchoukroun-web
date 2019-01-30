@@ -8,3 +8,12 @@
   width: 100%;
   margin: 1px;
 }
+
+.inner-panel {
+  margin: 5px 3px 3px;
+  padding: 2.5px 5px;
+  background-color: $brand-white;
+  border-width: 2px;
+  border-style: inset;
+  border-color: $brand-gray;
+}
