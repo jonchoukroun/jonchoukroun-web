@@ -2,7 +2,7 @@ import Component from '@ember/component';
 import { classNames } from '@ember-decorators/component';
 
 @classNames('window elevate-2')
-export default class SettingsWindowComponent extends Component {
+export default class AppWindowComponent extends Component {
 
   didInsertElement() {
     super.didInsertElement();
